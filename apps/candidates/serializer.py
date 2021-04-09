@@ -3,7 +3,9 @@ from .models import Candidates, Contacts
 
 
 class ContactsSerilaizer(serializers.ModelSerializer):      
-
+    """
+    Serializador do model contacts trata os campos Type_Contacts e Number_contact
+    """
     class Meta:
         model = Contacts
         fields = [
@@ -12,7 +14,12 @@ class ContactsSerilaizer(serializers.ModelSerializer):
         ]       
         
 class CandidatoSerializer(serializers.ModelSerializer):
-    contacts = ContactsSerilaizer(read_only=False)
+    """
+    Serializador do model Candidates trata 
+    todos os campos de candidados com exceção 
+    de created_at e updated_at
+    """
+    contacts = ContactsSerilaizer(read_only=False) 
     
     class Meta:
         model = Candidates
@@ -27,6 +34,9 @@ class CandidatoSerializer(serializers.ModelSerializer):
         ]
 
     def create(self, validated_data):
+        """Estão função sera melhora em verçoes futuas para alem da 
+        leitura aninhada do models poderá criar os 
+        models de forma tambem aninhada """
         fild_data = validated_data.pop('contacts')
         candidates_data = Candidates.objects.create(**validated_data)
         Contacts.objects.create(candidates=candidates_data, **fild_data)
