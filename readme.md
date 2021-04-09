@@ -1,4 +1,16 @@
 # Teste avaliativo Api Crud
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/44451704?v=4" width="100px;" alt="foto Izaias git"/><br>
+        <sub>
+          <b>Izaias Junior</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## Projeto desenvolvido com intuido avaliativo para processo seletivo de programador back-end
 
