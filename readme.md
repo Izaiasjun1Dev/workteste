@@ -49,7 +49,7 @@ assim a aplicação criará uma intacia de banco de dados para testes sqlite3
 No seu cmd ou promt de comando corra as linhas de comanado abaixo:
 
 ```bash
-$ conda project-env/bin/activate
+$ conda project-env/bin/activate ou activate <nome do seu ambiente>
 $ pip install requirements.txt
 
 
